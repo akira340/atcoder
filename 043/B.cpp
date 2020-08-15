@@ -11,8 +11,8 @@ int main() {
     char c = s[i];
     if(c=='B' && ans.size()>0) {
       ans.pop_back();
-    } else if(c!='B'){
-      ans += c;
+    } else if(c!='B') {
+      ans+=c;
     }
   }
   cout << ans << endl;
