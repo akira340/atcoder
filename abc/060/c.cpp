@@ -6,19 +6,16 @@ using namespace std;
 template<typename T> void drop(const T &x){cout<<x<<'\n';exit(0);}
 
 void solve() {
-  int n=9, m=9;
-  for(int i=0; i<n; ++i) {
-    for(int j=0; j<m; ++j) {
-      if(j!=i) {
-        cout << 1 << " ";
-      } else {
-        cout << 0 << " ";
-      }
-    }
-    cout << '\n';
-  }
+  int n, T; cin >> n >> T;
 
-  return;
+  int t, ans=0, x=0;
+  for(int i=0; i<n; ++i) {
+    cin >> t;
+    ans += t+T;
+    ans -= max(t,x);
+    x = t+T;
+  }
+  cout << ans << '\n';
 }
 
 signed main() {

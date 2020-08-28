@@ -6,19 +6,14 @@ using namespace std;
 template<typename T> void drop(const T &x){cout<<x<<'\n';exit(0);}
 
 void solve() {
-  int n=9, m=9;
-  for(int i=0; i<n; ++i) {
-    for(int j=0; j<m; ++j) {
-      if(j!=i) {
-        cout << 1 << " ";
-      } else {
-        cout << 0 << " ";
-      }
-    }
-    cout << '\n';
+  string s; cin >> s;
+  reverse(s.begin(), s.end());
+  string ss = "";
+  for(int i=0; i<s.size(); ++i) {
+    ss += s.at(i);
+    if(ss == "maerd" || ss == "remaerd" || ss == "esare" || ss == "resare") ss = "";
   }
-
-  return;
+  cout << (ss == "" ? "YES" : "NO") << '\n';
 }
 
 signed main() {

@@ -6,16 +6,17 @@ using namespace std;
 template<typename T> void drop(const T &x){cout<<x<<'\n';exit(0);}
 
 void solve() {
-  int n=9, m=9;
-  for(int i=0; i<n; ++i) {
-    for(int j=0; j<m; ++j) {
-      if(j!=i) {
-        cout << 1 << " ";
-      } else {
-        cout << 0 << " ";
-      }
+  string a,b; cin >> a >> b;
+  if(a.size()>b.size()) drop("GREATER");
+  if(a.size()<b.size()) drop("LESS");
+  if(a.size()==b.size()) {
+    if(a.at(0) > b.at(0)) {
+      drop("GREATER");
+    } else if(a.at(0) < b.at(0)) {
+      drop("LESS");
+    } else {
+      drop("EQUAL");
     }
-    cout << '\n';
   }
 
   return;

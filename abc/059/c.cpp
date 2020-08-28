@@ -6,18 +6,22 @@ using namespace std;
 template<typename T> void drop(const T &x){cout<<x<<'\n';exit(0);}
 
 void solve() {
-  int n=9, m=9;
+  int n; cin >> n;
+  ll a;
+  vector<ll> sum(2), cnt(2);
   for(int i=0; i<n; ++i) {
-    for(int j=0; j<m; ++j) {
-      if(j!=i) {
-        cout << 1 << " ";
-      } else {
-        cout << 0 << " ";
+    cin >> a;
+    for(int j : {0,1}) {
+      sum[j] += a;
+      int d = 1 - (i+j) % 2 * 2;
+      if(sum[j]*d <= 0) {
+        cnt[j] += abs(d-sum[j]);
+        sum[j] = d;
       }
     }
-    cout << '\n';
   }
-
+  cout << min(cnt[0],cnt[1]) << '\n';
+  
   return;
 }
 
