@@ -6,7 +6,8 @@ using namespace std;
 template<typename T> void drop(const T &x){cout<<x<<'\n';exit(0);}
 
 void solve() {
-
+  string march = "MARCH";
+  if(find(march.begin(), march.end(), 'M')) cout << "YES" << '\n';
 }
 
 signed main() {

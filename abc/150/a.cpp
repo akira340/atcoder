@@ -6,7 +6,8 @@ using namespace std;
 template<typename T> void drop(const T &x){cout<<x<<'\n';exit(0);}
 
 void solve() {
-
+  int k, x; cin >> k >> x;
+  cout << (500*k >= x ? "Yes" : "No") << '\n';
 }
 
 signed main() {

@@ -6,7 +6,8 @@ using namespace std;
 template<typename T> void drop(const T &x){cout<<x<<'\n';exit(0);}
 
 void solve() {
-
+  string a, b; cin >> a >> b;
+  cout << (a.size() > b.size() ? a : b) << '\n';
 }
 
 signed main() {

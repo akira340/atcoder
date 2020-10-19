@@ -6,7 +6,20 @@ using namespace std;
 template<typename T> void drop(const T &x){cout<<x<<'\n';exit(0);}
 
 void solve() {
+  int n; cin >> n;
+  string s; cin >> s;
 
+  int ans = 0;
+  for(int i=0; i<n; ++i) {
+    if(s[i] == 'A') {
+      if(s[i+1] == 'B') {
+        if(s[i+2] == 'C') {
+          ans++;
+        }
+      }
+    }
+  }
+  cout << ans << '\n';
 }
 
 signed main() {

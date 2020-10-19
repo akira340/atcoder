@@ -6,7 +6,8 @@ using namespace std;
 template<typename T> void drop(const T &x){cout<<x<<'\n';exit(0);}
 
 void solve() {
-
+  int n, x; cin >> n >> x;
+  cout << (x <= n/2 ? abs(1-x) : abs(n-x)) << '\n';
 }
 
 signed main() {

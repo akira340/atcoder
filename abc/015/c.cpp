@@ -6,7 +6,16 @@ using namespace std;
 template<typename T> void drop(const T &x){cout<<x<<'\n';exit(0);}
 
 void solve() {
+  int n, k; cin >> n >> k;
+  vector<vector<int>> t(n, vector<int>(k));
+  for(int i=0; i<n; ++i) for(int j=0; j<k; ++j) cin >> t[i][j];
 
+  int ans;
+  for(int i=0; i<n; ++i) {
+    for(int j=0; j<k; ++j) {
+      ans = ;
+    }
+  }
 }
 
 signed main() {

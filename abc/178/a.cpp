@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define ll long long
-
 template<typename T> void drop(const T &x){cout<<x<<'\n';exit(0);}
 
 void solve() {
-
+  int x;
+  cin >> x;
+  cout << (x == 0 ? 1 : 0) << '\n';
 }
 
 signed main() {

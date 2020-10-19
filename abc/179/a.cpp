@@ -1,12 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define ll long long
-
 template<typename T> void drop(const T &x){cout<<x<<'\n';exit(0);}
 
-void solve() {
-
+void milkshake() {
+  string s;
+  cin >> s;
+  if(s[s.size()-1] == 's') {
+    cout << s << "es" << '\n';
+    return;
+  }
+  cout << s << 's' << '\n';
 }
 
 signed main() {
@@ -14,7 +18,7 @@ signed main() {
   cin.tie(0);
   int T=1;
   //cin >> T;
-  while(T--) solve();
+  while(T--) milkshake();
 
   return 0;
 }
